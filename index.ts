@@ -87,7 +87,7 @@ function calculateWidgetRevenue(pw: number, sw: number): number {
     return pwRevenue + swRevenue;
 }
 
-function calculateWidget(iterations: number) {
+function calculateWidget(iterations: number): { bestPW: number, bestSW: number, bestRevenue: number} {
     // Define constants for maximum units and costs
     const [maxPW, maxSW, maxCost, costPW, costSW]: number[] = [150, 200, 20000, 80, 30];
     // Initialize variables to track the best revenue and corresponding units of PW and SW
@@ -160,7 +160,7 @@ function calculateTeamRevenue(teamA: number, teamB: number): number {
     // Return the total revenue from both teams
 }
 
-function calculateDevTeamRevenue(iterations: number) {
+function calculateDevTeamRevenue(iterations: number): { bestA: number, bestB: number, bestRevenue: number} {
     // This function determines the optimal number of developers for Team A and Team B
     // to maximize total revenue, based on a given number of iterations.
 
